@@ -1,0 +1,68 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin: auto;}
+body{
+	font-family: Arial;
+}
+.contact-box {
+            width: 600px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .contact-box p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        label span {
+            color: red;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+
+        textarea {
+			font-family: Arial;
+            height: 120px;
+            resize: none;
+        }
+
+        button {
+            width: 100%;
+            background: #e53935;
+            color: #fff;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #d32f2f;
+        }
+
+        .error {
+            color: red;
+            font-size: 13px;
+            display: none;
+        }
