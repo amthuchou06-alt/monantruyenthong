@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	font-family: sans-serif;
+}
+.form-group{
+	margin-left: 25px;;
+}
+#feedback{
+	width: 95%;
+	padding: 10px;
+	box-sizing: border-box;
+}
+.form-group1{
+	width: 500px;
+}
+.nd{
+	padding-left: 10px;
+}
+
+
+

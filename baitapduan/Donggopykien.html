@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	<link href="Style/default5.css" type="text/css" rel="stylesheet">
+	<script>
+	function sendFeedback() {
+  var fullname = document.getElementById("fullname").value;
+  var feedback = document.getElementById("feedback").value;
+
+  if (fullname == "" || feedback == "") {
+    alert("Xin vui lòng nhập đầy đủ thông tin góp ý.");
+  } else {
+    var link = "mailto:admin123456@gmail.com?subject=Góp ý từ " + fullname + "&body=" + feedback;
+    window.location.href = link;
+  }
+}
+
+function resetForm() {
+  document.getElementById("fullname").value = "";
+  document.getElementById("feedback").value = "";
+}
+	</script>
+</head>
+<body>
+	<table  border="1" align="center">
+	<form >
+		<tr>
+			 <td  class="form-group1">
+			<h1 align="center"> ĐÓNG GÓP Ý KIẾN</h1>
+		 		 
+			    <h3 class="nd">Họ và tên:<input type="text" id="fullname" placeholder=""></h3> 
+				
+					<h3 class="nd">Nội dung góp ý:</h3>
+            
+                <div class="form-group"><textarea id="feedback" rows="10"></textarea></div>
+				  <h3 align="center">
+					<button type="button" onClick="sendFeedback()"> Gửi Đi</button>
+					  <button type="reset" onClick="resetForm()">nhập lại</button></h3>
+		  </td>
+			</tr>
+			</form>
+		</table>
+</body>
+</html>

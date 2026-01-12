@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	<link href="Style/default4.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+	<div class="contact-box">
+    <p>
+        Chúng tôi mong muốn lắng nghe ý kiến của quý khách. 
+        Vui lòng gửi mọi yêu cầu, thắc mắc theo thông tin bên dưới, 
+        chúng tôi sẽ liên lạc với bạn sớm nhất có thể.
+    </p>
+
+    <form id="contactForm">
+        <div class="form-group">
+            <label>HỌ VÀ TÊN <span>*</span></label>
+            <input type="text" id="name" placeholder="Nhập họ và tên">
+            <div class="error">Vui lòng nhập họ tên</div>
+        </div>
+
+        <div class="form-group">
+            <label>EMAIL <span>*</span></label>
+            <input type="email" id="email" placeholder="Nhập địa chỉ Email">
+            <div class="error">Vui lòng nhập email hợp lệ</div>
+        </div>
+
+        <div class="form-group">
+            <label>ĐIỆN THOẠI <span>*</span></label>
+            <input type="text" id="phone" placeholder="Nhập số điện thoại">
+            <div class="error">Vui lòng nhập số điện thoại</div>
+        </div>
+
+        <div class="form-group">
+            <label>NỘI DUNG <span>*</span></label>
+            <textarea id="message" placeholder="Nội dung liên hệ"></textarea>
+            <div class="error">Vui lòng nhập nội dung</div>
+        </div>
+
+        <button type="submit">GỬI TIN NHẮN</button>
+    </form>
+</div>
+	<script>
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        let isValid = true;
+        const fields = ["name", "email", "phone", "message"];
+
+        fields.forEach(id => {
+            const input = document.getElementById(id);
+            const error = input.nextElementSibling;
+
+            if (input.value.trim() === "") {
+                error.style.display = "block";
+                isValid = false;
+            } else {
+                error.style.display = "none";
+            }
+        });
+
+        if (isValid) {
+            alert("Gửi tin nhắn thành công!");
+            this.reset();
+        }
+    });
+</script>
+</body>
+</html>
